@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Group Test Suite"  verbose="1">
+  <test name="testLogin111">
+  <parameter name="Env" value="PROD"></parameter>
+  <parameter name="Browser" value="Chrome"></parameter>
+  <parameter name="TestSuite" value="Prod_TestList_1"></parameter>
+  <groups>
+ 
+	    <run>
+	    <!--include name="Sanity" /-->
+		<include name="Regression" />
+ 
+	    </run>
+ 
+	</groups>
+    <classes>
+      <class name="MF.FrameworkCode.StartFramework"/>
+    </classes>
+  </test> <!-- Test -->
+</suite> <!-- Suite -->
